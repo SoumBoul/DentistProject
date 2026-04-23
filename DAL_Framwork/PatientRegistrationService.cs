@@ -8,7 +8,7 @@ namespace DAL_Framwork
     public class PatientRegistrationService
     {
 
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
         static public int AddPatientWithTransaction(PersonDTO person, PatientDTO patient,MutuellDTO mutuelle,MedicalRecordDTO medicalRecord
                                                      ,List<AllergyDto> allergies)
 
@@ -178,3 +178,4 @@ namespace DAL_Framwork
     }
 }
                
+

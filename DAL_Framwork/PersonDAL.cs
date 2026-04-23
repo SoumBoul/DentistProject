@@ -10,7 +10,7 @@ namespace DAL_Framwork
     {
 
         public PersonDTO person;
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
         static public List<PersonDTO> GetAllPeople()
         {
 
@@ -378,3 +378,4 @@ namespace DAL_Framwork
 
     }
 }
+

@@ -7,7 +7,7 @@ namespace DAL_Framwork
 {
     public class InvoiceDAL
     {
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
 
        static  public int InsertInvoice(InvoiceDTO invoiceDTO)
         {
@@ -60,3 +60,4 @@ namespace DAL_Framwork
 
     
 }
+

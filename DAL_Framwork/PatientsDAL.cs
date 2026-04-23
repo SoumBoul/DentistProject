@@ -11,7 +11,7 @@ namespace DAL_Framwork
     public class PatientsDAL
     {
 
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
 
         static public List<PatientDTO> GetListPatients()
         {

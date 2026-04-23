@@ -10,7 +10,7 @@ namespace DAL_Framwork
 {
     public class TreatmentDAL
     {
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
 
         static public int InsertTreatment(TreatmentDTO treatmentDTO)
         {
@@ -90,3 +90,4 @@ namespace DAL_Framwork
         }
     }
 }
+

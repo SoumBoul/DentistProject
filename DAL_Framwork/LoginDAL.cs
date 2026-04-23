@@ -11,7 +11,7 @@ namespace DAL_Framwork
 {
     public class LoginDAL
     {
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
 
         static public bool  LoginWithUserNameAndPassword(string username, string password)
         {
@@ -83,3 +83,4 @@ namespace DAL_Framwork
 
         }
 }
+

@@ -7,7 +7,7 @@ namespace DAL_Framwork
 {
     public class MutuelleDAL
     {
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
         static public int AddMutuelle(MutuellDTO mutuelle, SqlConnection conn, SqlTransaction trans)
         {
 
@@ -140,3 +140,4 @@ namespace DAL_Framwork
 
     }
 }
+

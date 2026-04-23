@@ -12,7 +12,7 @@ namespace DAL_Framwork
 {
     public class DentistDAL
     {
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
 
         static public List<DentistDTO> GetListDentists()
         {
@@ -439,3 +439,4 @@ namespace DAL_Framwork
 
     }
 }
+

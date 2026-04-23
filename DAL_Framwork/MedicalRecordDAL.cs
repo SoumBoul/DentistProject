@@ -10,7 +10,7 @@ namespace DAL_Framwork
     public class MedicalRecordDAL
     {
 
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
         static public List<MedicalRecordDTO> GetAllMedicalRecord()
         {
 
@@ -183,3 +183,4 @@ namespace DAL_Framwork
         }
     }
 }
+

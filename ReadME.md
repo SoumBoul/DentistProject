@@ -118,10 +118,10 @@ DentisteDB
 The current connection string is defined in the DAL classes, for example:
 
 ```text
-server=.;database= DentisteDB; user id=sa; password=123456;
+server=.;database=DentisteDB;Integrated Security=True;
 ```
 
-If your SQL Server configuration is different, update the connection string in the files inside `DAL_Framwork`.
+If your SQL Server configuration is different, update the connection string locally. Avoid committing real usernames or passwords to GitHub.
 
 ## Getting Started
 
@@ -156,3 +156,4 @@ ScreenShots/Database.png
 ## Author
 
 Developed by SoumBoul.
+

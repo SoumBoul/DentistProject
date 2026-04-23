@@ -11,7 +11,7 @@ namespace DAL_Framwork
 {
     public  class AllergyDAL
     {
-        static public string connectionString = "server=.;database= DentisteDB; user id=sa; password=123456; ";
+        static public string connectionString = "server=.;database=DentisteDB;Integrated Security=True;";
         static public int AddAllergie(AllergyDto allergieDto, SqlConnection conn, SqlTransaction trans)
         {
             int AllergieID = 0;
@@ -145,3 +145,4 @@ namespace DAL_Framwork
 
     
 }
+
