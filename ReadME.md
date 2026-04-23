@@ -1,85 +1,158 @@
-# Dentist Management System
+﻿# Dentist Management System
 
-Desktop application developed with **C# WinForms** and **SQL Server** for managing a dental clinic.  
-The project demonstrates a **3-tier architecture** separating the user interface, business logic, and data access.
+Desktop dental clinic management application built with **C# Windows Forms** and **SQL Server**. The solution is organized with a layered architecture that separates the user interface, business logic, data access, and data transfer objects.
 
----
+## Overview
+
+This project helps manage the daily operations of a dental clinic, including patients, dentists, appointments, treatments, medical records, allergies, invoices, payments, and login access.
 
 ## Features
 
-- Add a new patient
-- Update patient information
-- Display patients in a DataGridView
-- Manage personal information
-- Upload and display patient images
-- Use stored procedures for database operations
-
----
+- Patient registration and profile management
+- Dentist registration and profile management
+- Appointment scheduling
+- Treatment management
+- Medical record management
+- Allergy tracking
+- Mutuelle/insurance information management
+- Invoice and payment management
+- User login and authentication
+- Patient image management
+- Dashboard interface
+- SQL Server data storage
 
 ## Technologies
 
 - C#
-- .NET Framework
-- WinForms
+- .NET Framework 4.7.2
+- Windows Forms
 - SQL Server
 - ADO.NET
-- Stored Procedures
+- Guna UI2 WinForms
 - Visual Studio
 
----
+## Solution Structure
 
-## Project Architecture
+```text
+DentistSolution/
+|-- BL_Framwork/          # Business logic layer
+|-- DAL_Framwork/         # Data access layer and SQL Server communication
+|-- DTO_Framwork/         # Data Transfer Objects used between layers
+|-- ProjectDentiste/      # Windows Forms presentation layer
+|-- DataBase/             # Database-related files
+|-- ScreenShots/          # Project screenshots
+|-- packages/             # NuGet packages
+|-- DentistSolution.sln   # Visual Studio solution
+|-- .gitignore
+`-- ReadME.md
+```
 
-The application follows a **3-tier architecture**.
+## Main Modules
 
-### Presentation Layer (UI)
-WinForms interface responsible for user interaction.
+### Presentation Layer
+
+The `ProjectDentiste` project contains the Windows Forms screens and user controls.
+
+Main areas include:
+
+- `Patients`
+- `Dentists`
+- `Appointments`
+- `Treatments`
+- `MedicalRecord`
+- `Payment`
+- `Mutuelle`
+- `Allergies`
+- `Login`
+- `MainForm`
+
+### Business Layer
+
+The `BL_Framwork` project contains the business logic of the application.
 
 Examples:
 
-- `frmAddUpdatePatient`
-- `frmPatientList`
-- `ctrlPersonInfo`
+- `PatientBL`
+- `DentistBL`
+- `AppointmentBL`
+- `TreatmentBL`
+- `MedicalRecordBL`
+- `InvoiceBL`
+- `LoginBL`
 
-Responsibilities:
-- Display data
-- Handle user actions
-- Communicate with the Business Layer
+### Data Access Layer
 
----
+The `DAL_Framwork` project manages database communication using SQL Server and ADO.NET.
 
-### Business Layer (BL)
+Examples:
 
-Contains the **business logic** of the application.
-
-Responsibilities:
-
-- Validate data
-- Apply business rules
-- Communicate with the Data Access Layer
-
----
-
-### Data Access Layer (DAL)
-
-Responsible for **database communication**.
-
-Uses:
-
-- `SqlConnection`
-- `SqlCommand`
-- `SqlDataReader`
-- Stored Procedures
-
----
+- `PatientsDAL`
+- `DentistDAL`
+- `AppointmentDAL`
+- `TreatmentDAL`
+- `MedicalRecordDAL`
+- `InvoiceDAL`
+- `LoginDAL`
 
 ### DTO Layer
 
-DTO (Data Transfer Objects) are used to transfer data between layers.
+The `DTO_Framwork` project contains Data Transfer Objects used to move data between the presentation, business, and data access layers.
 
-Examples:
+## Requirements
 
-- `PersonDTO`
-- `PatientDTO`
+Before running the project, install:
 
----
+- Visual Studio
+- .NET Framework 4.7.2
+- SQL Server
+- NuGet package restore support
+
+## Database Configuration
+
+The application uses a SQL Server database named:
+
+```text
+DentisteDB
+```
+
+The current connection string is defined in the DAL classes, for example:
+
+```text
+server=.;database= DentisteDB; user id=sa; password=123456;
+```
+
+If your SQL Server configuration is different, update the connection string in the files inside `DAL_Framwork`.
+
+## Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/SoumBoul/DentistSolution.git
+```
+
+2. Open the solution in Visual Studio:
+
+```text
+DentistSolution.sln
+```
+
+3. Restore NuGet packages if Visual Studio does not restore them automatically.
+
+4. Create or restore the SQL Server database `DentisteDB`.
+
+5. Update the SQL Server connection string if needed.
+
+6. Build and run the application.
+
+## Screenshot
+
+A database screenshot is available in:
+
+```text
+ScreenShots/Database.png
+```
+
+## Author
+
+Developed by SoumBoul.
